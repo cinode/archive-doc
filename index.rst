@@ -7,11 +7,9 @@ Contents:
    :maxdepth: 2
 
    introduction
-   components/index
    design/index
-   
-   
-   
+   components/index
+
 
 
 Indices and tables
@@ -19,4 +17,3 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`search`
-
