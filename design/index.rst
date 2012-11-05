@@ -178,7 +178,8 @@ The perfect match here is a DHT network simillar
 to those used in Kadmeila or trackerless torrent.
 There are following requirements to make this
 kind of network work efficiently:
-- Each client must have an unique id, ids shoould
+
+- Each client must have an unique id, ids should
   be distributted regularly across whole range
   of ids available in the network
 - Each content searched for must be addressed by
@@ -200,7 +201,7 @@ solition is that one can easily impersonate another
 node and thus start doing amlicious activity as if
 it was done by the original node.
 
-Here we merge the id of a client with it's
+Here we connect the id of a client with it's
 public/private key pair. Since all communication
 will happen over SSL/TLS connections, we can use
 the peer id to validate the certificate presented
