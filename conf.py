@@ -23,6 +23,8 @@ import sys, os
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
+creator = u'byo'
+
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = []
@@ -41,7 +43,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Cinode'
-copyright = u'2012, byo'
+copyright = u'2012, ' + creator
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -164,7 +166,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Cinodedoc'
+htmlhelp_basename = project + 'doc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,8 +185,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Cinode.tex', u'Ciphernet Documentation',
-   u'byo', 'manual'),
+  ('index', project + '.tex', project + u' Documentation',
+   creator, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -213,8 +215,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'ciphernet', u'Cinode Documentation',
-     [u'byo'], 1)
+    ('index', project, project + u' Documentation',
+     [creator], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -227,8 +229,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Cinode', u'Ciphernet Documentation',
-   u'byo', 'Cinode', 'One line description of project.',
+  ('index', project, project + u' Documentation',
+   creator, project, 'One line description of project.',
    'Miscellaneous'),
 ]
 
