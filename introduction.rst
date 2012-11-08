@@ -35,6 +35,7 @@ to secure the data in such way that even those admins can't access it. The
 encryption/decryption process is executed on the client side and the encryption
 key never leaves client's environment.
 Examples of such projects are:
+
  - Wuala - online backup and storage
  - LastPass - secure cloud-based password manager.
 
