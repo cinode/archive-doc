@@ -4,6 +4,7 @@ Welcome to Cinode's documentation!
 Contents:
 
 .. toctree::
+   :numbered:
 
    introduction
    design/index
