@@ -4,7 +4,6 @@ Welcome to Cinode's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
 
    introduction
    design/index
