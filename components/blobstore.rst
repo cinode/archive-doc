@@ -1,11 +1,10 @@
----------------
 The Blobstore
----------------
+#############
 
 
 
 Static blob strucure
----------------------
+********************
 
 Unencrypted content: none
 Protection against unauthorised write: blob id identifies the content so changing the content would create another blob

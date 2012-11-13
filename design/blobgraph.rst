@@ -1,5 +1,5 @@
 Blob graph
--------------
+##########
 
 Each blob may either contsin some information
 with it or link to other blobs in the network.

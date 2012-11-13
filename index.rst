@@ -1,5 +1,5 @@
 Welcome to Cinode's documentation!
-=====================================
+#####################################
 
 Contents:
 
@@ -13,7 +13,7 @@ Contents:
 
 
 Indices and tables
-==================
+##################
 
 * :ref:`genindex`
 * :ref:`search`

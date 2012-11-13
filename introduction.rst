@@ -1,6 +1,5 @@
-------------------
 Introduction
-------------------
+############
 
 When trying to describe the Cinode in just few words, it can be presented as
 a network simillar to the Internet but relying on strong cryptography used to
@@ -41,7 +40,7 @@ Examples of such projects are:
 
 
 Cinode goals
----------------
+***************
 
 Although we've already started to see that the client-side encryption may be
 a solution to serious server-side problems, this doesn't solve following ones:
@@ -64,7 +63,7 @@ security is controlled using strong cryptography which greatly reduces number of
 potentially exploitable areas, like the server logic.
 
 What Cinode's is not
------------------------
+***********************
 
 Cinode is not a remedy for every problem found in today's internet. Especially
 it won't protect much against phishing requests, key sniffers or any other

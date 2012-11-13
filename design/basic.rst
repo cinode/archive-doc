@@ -1,6 +1,5 @@
-------------------
 Basic requirements
-------------------
+##################
 
 The Cinode project introduces brand new approach for distributed storage and
 application deployment. It breaks the concept of centralised services widely

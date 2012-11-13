@@ -1,6 +1,5 @@
-------------
 The storage
-------------
+###########
 
 All information stored inside Cinode network is kept inside data blobs.
 One particular blob may be stored in one or more nodes. The more nodes,

@@ -1,5 +1,5 @@
 Indexing through the DHT network
----------------------------------------
+################################
 
 Since blobs doesn't have any arbitrary location,
 it's required to be able to quickly search for
