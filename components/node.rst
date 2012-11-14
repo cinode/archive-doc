@@ -48,3 +48,40 @@ GUI application with the direct Cinode support compiled-in. The proposed
 implementation on the other hand provides a known established accessnig protocol
 that allows standard web-based applications to be rundirectly from the Cinode itself.
 
+Proposed local access interface
+*******************************
+
+Te Cinode client can expose it's information
+related to a particular used in a form of
+web proxy. The same approach has been used in
+TOR networks prpving to be secure enough.
+There are follo advantages of such approach:
+
+- We can easily provide a local access to files
+  throuh a HTTP protocol
+- We can controll domain names and use it to
+  secure locally running applications using
+  standard cross-domain policy protection
+- We can block any traffic to web sites outside
+  Cinode world or allow only certain hosts to
+  be accessible from particular Cinode-hosted application.
+- The cinode network may also be used by any other desktop
+  aplication since we're using standard proxy protocol.
+  For those applications thouh we can not easily use
+  cross-domain protection.
+
+The disadvantages of tjis approach are:
+  - The used have to fully swit h to the Cinode
+    network after setting up the proxy so that
+    the access to standa web sites is more
+    complicated
+  - The implementation of a http proxy may be a bit more
+    complicated
+  - It does protect wellclients implementing cross-domain
+    protection,  desktop apps may stilaccess all host names.
+
+The most secure way to access Cinode would be throuh a web browser plugin
+or direct browser's built-in functionaliy. Due to complexity
+of such implementation, this mplementation may be postponed
+after other access methods are already working and the
+Cinode starts gaining more traction.
