@@ -6,7 +6,7 @@ Contents:
 .. toctree::
    :numbered:
 
-   introduction
+   overview/overview
    design/index
    components/index
 

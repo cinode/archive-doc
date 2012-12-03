@@ -1,14 +1,65 @@
 Overview
-##################
+########
+
+.. figure:: overview.svg
 
 What Cinode is?
+--------------
 
-It is a new kind of network used to host files and run
-web-like applications.
-It's fully distributed made of resources cumulatively
-shared by network's users.
-There' a high pressure on the security guaranteed
-by strong encryption methods.
+* It is a new kind of network used to host files and run web-like applications
+* It's fully distributed system made of resources cumulatively shared by network's users
+* The security is enforced by using highly secure encryption algorithms
+* There's no central management nor any authority
+* Initially build on top of the Internet, it can also be used in other communication
+  layers
+  
+How it's built
+--------------
+
+The smallest building block of Cinode is a Node. The Node itself is fully functional
+and allow the user to use it's Local Access Interface. The Node itself is using
+a permament storage like local hard drive to store iformation in form of data blobs.
+
+Nodes can communicate between themselves using secure connections. Those communication
+channels are needed to exchange blobs between Nodes. This data migration is used to 
+create backups of data and to create local blob cache to be quickly accessible by the
+user.
+
+Every data blob is uniquely named using hash-based identifier. This allows a global
+Distributed Hash Table (DHT) to be used in order to allow searching for a particular
+blob.
+
+The security
+------------
+
+Securty is the most important Cinode's factor. The lack of server side forces us
+to use alternative methods to usual user authorisation. The approach that has
+been used is based on cryptography.
+
+Every blob in the Cinode network is stored and transferred to other nodes in an
+encrypted form. The ability to decrypt this data (so hacing a decryption key) equals
+a read access then.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+Every node is storing a part of the Cinode information
 
 What benefits does it give over the current
 client-server model?
