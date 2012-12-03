@@ -32,3 +32,28 @@ the number of all other connections, those fake nodes may analyze most of the
 node's blob traffic. Even though the content of blobs will be useless without
 a proper encryption key, the information about the blob usage, especially when
 anallyzed on large datasets, may reveal quite important user's information.
+
+**End TODO**
+
+
+Trusted nodes
+-------------
+
+One of thr important aspects of Cinode is the trust.
+Similarly to how PGP works, we introdce a concept
+of trusted nodes.
+A trusted node is the one of id we have verified
+usin a highly secure data communication channel
+(recommended option iis to meet in the reality and
+exchange the id during such meeting).
+Such node must also represent a person or entity
+we trust we trust and are sure he/she/it will
+not act in a way harmful to us.
+
+The list of trusted nodes will be used in future versions of
+Cinode in order to allow anonymised distribution of blobs.
+
+Since th network of a trust may also reveal some crucial
+information about a specific node, it's advised not to
+threat such nodes in any special way while establishing
+TLS connections to other nodes.

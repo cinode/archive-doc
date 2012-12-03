@@ -1,7 +1,30 @@
 The Blobstore
 #############
 
+A blobstore is an integral part of every node. It's
+main purpose is to permamently store blobs the
+node is interested in. This may contail blobs used
+by local client or may be a copy of blob stored on
+another node in order to keep it's backup or to help
+distribute the blob across the network efficiently.
 
+The sum of all blobstores in all Cinode nodes forms
+the overall datastore for the Cinode network. There's no
+other location for storing this data inthe Cinode. There
+may be additional files stored by specific clients
+but they are not counted as Cinode's data. An example of such
+file may be a root private user's key. It's not required
+to be stored inside Cinrt (may be kept for backup purposes thoug).
+
+Since the Cinode operates on one global concept of datastore
+assuming it's being spread across large number of nodes,
+we have to be able to validate whether given blob has
+not been crested in order to destroy some information.
+Because of this requirement, blob names are basically
+created as cryptographically strong hashes of specific
+blob properies such as it's content or a public key associated
+with he blob. His method ensures that we can not create
+a blib assuming it's name
 
 Static blob strucure
 ********************
@@ -36,3 +59,4 @@ The unen rypted content is as follows:
 * For each blob:
 - blob name: lstring
 - blob key: lstring
+
