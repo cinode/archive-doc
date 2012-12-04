@@ -7,8 +7,9 @@ Contents:
    :numbered:
 
    overview/overview
-   design/index
-   components/index
+   blobstore/blobstore
+   nodenetwork/nodenetwork
+   dht/dht
 
 
 

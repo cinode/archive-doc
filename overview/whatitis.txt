@@ -1,0 +1,9 @@
+What Cinode is?
+##############
+
+* It is a new kind of network used to host files and run web-like applications
+* It's fully distributed system made of resources cumulatively shared by network's users
+* The security is enforced by using highly secure encryption algorithms
+* There's no central management nor any authority
+* Initially build on top of the Internet, it can also be used in other communication
+  layers

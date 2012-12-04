@@ -1,0 +1,5 @@
+Limitations
+###########
+
+TODO: Not realtime, encryption overhead, client-side only logic, 'memorizing' network
+

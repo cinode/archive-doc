@@ -1,0 +1,16 @@
+How it's built
+##############
+
+The smallest building block of Cinode is a Node. The Node itself is fully functional
+and allow the user to use it's Local Access Interface. The Node itself is using
+a permament storage like local hard drive to store iformation in form of data blobs.
+
+Nodes can communicate between themselves using secure connections. Those communication
+channels are needed to exchange blobs between Nodes. This data migration is used to 
+create backups of data and to create local blob cache to be quickly accessible by the
+user.
+
+Every data blob is uniquely named using hash-based identifier. This allows a global
+Distributed Hash Table (DHT) to be used in order to allow searching for a particular
+blob.
+

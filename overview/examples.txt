@@ -1,0 +1,4 @@
+Examples of use
+###############
+
+TODO: Make description of the following: photo gallery, cloud drive with sync and history, cloud audio player, embedded in server backend
