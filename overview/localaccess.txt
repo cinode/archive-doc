@@ -2,3 +2,47 @@ Local access interface
 ######################
 
 TODO: Describe the shareable filesystem build on top of blob graph
+
+The user can access the Cinode by a web proxy server built into the
+node software. It can be disabled creating a node that participates
+in cross-blob traffic only. Such configuration would create
+a server-like node not accessible by standard user interface.
+
+The http proxy interface provides an easy to use web panel viewable
+by any standard web browser. It also allows execution of client-side
+web-based applications such as javascript apps, native client code or
+simillar. Files needed to execute such application are also hosted
+on the Cinode network.
+
+All information hosted inside Cinode network is stored inside data blobs.
+They can form a structure simillar to a filesystem due to a presence of
+directory and link blobs. The actual structure is a bit more complex and
+is called blob graph. From the algoryghmic point of view, this graph
+is a directed cyclic one.  User's Cinode-hosted filesystem is a part of it
+with one blob promoted to point to filesystem's root directory.
+
+.. graphviz:: blobgraph.dot
+
+
+
+The information stored inside flat blob structure is presented as
+a filesystem-like structure. This can be achieved since blobs
+contain directory and link entries conne ting different blobs
+together in one global blob graph.
+
+In order to securely execute applications, each one
+is executer on it's own "virtual" randomized hostname
+provided by the prpxy. It helps making sure that
+given application does access it's own resources
+and also hardens the possibility to sniff user's
+information by malicious software.
+
+The Cinode's startup page (the one provided by
+a successful login) is protected in a simillar
+way.
+
+Since the user's password trnds to be a weakest poin
+in most of secure solutions, Cinode does use cryptographic
+keys instead. In order to login, such key must be provided
+by the user. Similarly to how openssh keys are protrcted,
+the key may require an extra passphrase.

@@ -10,4 +10,6 @@ Overview
 
 .. include:: security.txt
 
+.. include:: localaccess.txt
+
 .. include:: limitations.txt

@@ -14,3 +14,16 @@ Every data blob is uniquely named using hash-based identifier. This allows a glo
 Distributed Hash Table (DHT) to be used in order to allow searching for a particular
 blob.
 
+He Local interface available to he user is presented in a form
+of a filesystem accessible through a http web proxy. Applicatoons
+hosted inside Cinode are also loaded from this filesystem. They
+are executed locally on the user's machine and have access to
+a part of the filesystem being app's execution environment.
+
+In order to alow users communicate hrough Cinode
+applications, given filesystem directory or file
+can be shared with another user. Such shared resource
+can be hen plugged into the filesystem of another user
+becomming available for his own instance of the applicaton.
+The share is realised by moving blobs between nodes. This
+process is fully automatic from the user's point of view.
