@@ -1,3 +1,0 @@
-digraph Blobstore {
-   node [shape=box]; bl1; bl2; bl3; bl4;
-}
