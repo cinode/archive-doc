@@ -2,3 +2,62 @@ Examples of use
 ###############
 
 TODO: Make description of the following: photo gallery, cloud drive with sync and history, cloud audio player, embedded in server backend
+
+Let's take a look at exaples of few applications
+that can be built on top of ghe Cinode infrastrucure.
+
+Photo gallery
+-------------
+
+The structure of photo albums can very easily
+be represented in a directory structure of application's
+local data folder. Albums are represented by folder's
+directory structure, pictures in the album being
+simple filed. In addition to this information,
+each photo may have it's metadata folder containing
+thumbnails, ratings and comments.
+
+Sharing given album with a friend is as simple
+as sharing one particular folder.
+
+
+Cloud storage drive
+-------------------
+
+The local filzystem can naturally be reprezented
+in a structure of Cinode filesystem. The simplest
+approach then is to create a virtual drive representing
+such filesystem and acceess files directly.
+
+A more advanced approach would require to
+store metadata information next to each
+file and directory. This information (last
+modification time, checksum, vesrion number etc)
+can be then used to synchronize local folders
+with hose stored inside the Cinode network.
+
+
+Cloud audio player
+------------------
+
+The Cinode system may be used to store user's
+music collection inside the cloud. The filesystek
+layout may serve to organize files into albums.
+The player may be a simple flash-based plauer
+bound to the application. Cinode node code
+may also be embedded into a dedicated mobile
+application allowing to listen to the music
+on this device without a dedicated streaming
+server.
+
+The Cinode infrastructure can also be used by
+music stores where the pro ess of buying will
+ene in a music folder shared with the buyer.
+A positive side effect of such approach is
+that once given client has bought a music
+bundle, it can start helping to distribute
+the music to other buyers thus reducing the
+handwidth cost. The file is never transferred
+in an unencrypted form. The buy license may
+require an agreement not to share the music
+further.

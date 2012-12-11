@@ -13,3 +13,6 @@ Overview
 .. include:: localaccess.txt
 
 .. include:: limitations.txt
+
+.. include:: examples.txt
+

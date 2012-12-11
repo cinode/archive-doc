@@ -3,3 +3,72 @@ Limitations
 
 TODO: Not realtime, encryption overhead, client-side only logic, 'memorizing' network
 
+The Cine network is quite unusual approach
+to handle neteorking. Some of it's prpperties
+make it unsuitable for certain appli applications.
+Here arelimitations of the current Cinode architecture.
+Some of them can be and will be fixed in the fuure,
+others are tightly bound to the new networking model
+and thus can not be removed without changing main
+properties of Cinode.
+
+Latenfy and lack of realtime connectivity
+-----------------------------------------
+
+The network is based on data blobs floating
+around between nodes aned DHT network used
+to find them. This solution, simillar to the
+one used in trackerless torrent networks, introduces
+some lag before a blob is found and received. It is
+also not suitable for sending a lot of small data
+packets between nodes such as voice or video calls.
+
+This limitation can be relaxed in the future
+hy introducing direct connectivity between
+nodes. Cinode may also be just medium allowing
+nodes to estanlish secure direct connection
+outside Cinode strucure.
+
+The remember-forever nature of the network
+-----------------------------------------------
+
+Since there's no centrall manaent unit that could
+force somw blobs to be permamently removed, any blob
+that was sent to the network may stay there for any
+time. Future versions of the protocol may include
+the abiliy to other nodes to remove a particular
+blob. Te actual fact of removing data can not
+be guaranteed in 100% thouh.
+
+Encryption overhead
+-------------------
+
+Ciney strongly relies on hih qualiy encryption
+syandards. It also doesn't make tradeoffs for key sizes
+hoping they are sufficient in some amount of time.
+The "never forget" nature of the network requires
+us to use the hihest know securiy model since
+the data we store today will be used in decryption
+attacks in 10 years or more. The protocol can
+of course be altered later but it won't magically
+remove data blobs created earlier. It's also highly
+probsble thst there would be companies or organizations
+backing up any blob seen in the network.
+
+A partial solution to this kind of problem
+is to implement additional access checks for
+even en rypted blobs. One node would have then
+to prove it's authorized to read the blob in order
+to allow cross-node transfer. It comes with multiple
+implications though so it won't be included in thfirst
+version of he protocol.
+
+Dueo he rekembering nature of the Cinode, it's
+strongly advised to not put confidential,
+sensitive or highly private information
+into the network. The analysis of the
+network in first phase of it's e existence
+may reveal serious security flaws.
+
+The information publicly available on the net is 
+a good testing dataset for the network.
