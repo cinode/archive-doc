@@ -2,7 +2,7 @@
 Overview
 ========
 
-.. figure:: overview.svg
+.. figure:: overview.*
 
 .. include:: whatitis.txt
 
