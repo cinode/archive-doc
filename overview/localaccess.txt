@@ -1,48 +1,72 @@
 Local access interface
 ######################
 
-TODO: Describe the shareable filesystem build on top of blob graph
-
 The user can access the Cinode by a web proxy server built into the
 node software. It can be disabled creating a node that participates
 in cross-blob traffic only. Such configuration would create
 a server-like node not accessible by standard user interface.
 
-The http proxy interface provides an easy to use web panel viewable
+The HTTP proxy interface provides an easy to use web panel viewable
 by any standard web browser. It also allows execution of client-side
 web-based applications such as javascript apps, native client code or
-simillar. Files needed to execute such application are also hosted
+similar. Files needed to execute such application are also hosted
 on the Cinode network.
 
 All information hosted inside Cinode network is stored inside data blobs.
-They can form a structure simillar to a filesystem due to a presence of
+They can form a structure similar to a filesystem due to a presence of
 directory and link blobs. The actual structure is a bit more complex and
-is called blob graph. From the algoryghmic point of view, this graph
+is called blob graph. From the algorithmic point of view, this graph
 is a directed cyclic one.  User's Cinode-hosted filesystem is a part of it
-with one blob promoted to point to filesystem's root directory.
+with one blob promoted to be an entry point to filesystem's root directory:
 
-.. graphviz:: blobgraph.dot
+.. graphviz::
 
+	digraph BlobGraph {
+	
+		a1 -> a2;
+		a2 -> a3;
+		a3 -> a4;
+		a3 -> a5;
+		a2 -> s1;
+		
+		b1 -> b2;
+		b2 -> s1;
+		b2 -> b3;
+		b2 -> b4;
+		
+		
+		s1 -> s2;
+		s2 -> s3;
+		s2 -> s4;
+		s2 -> s5;
+	
+	}
+	
+In the example above, a1 and b1 are root blobs for separate users.
+Each user see his own part of the graph and doesn't see the part to
+which he has no reference to. For example user of a1-based filesystem
+doesn't see blobs: b1, b2, b3 and b4. Similarly, the user of b1-based
+filesystem doesn't see blobs: a1, a2, a3, a4 and a5. The shared part
+(s1, s3, s3 and s4) can be accessed by both users.
 
+The filesystem can be easily accessed and manipulated through a simple
+web api provided by the proxy. This is especially usefull to Cinode-based
+applications. Each one of them is executed in a safe sandbox by using
+a randomized "virtual" hostname. In addition to that, this particular
+hostname provides an access to a particular sub-directory in the user's
+filesystem blocking any access outside the sandbox. The randomized
+hostname for every application and same-origin policy implemented in
+all modern browsers prevents applications from accessing the information
+they were not authorized to. It also increases the complexity of
+sniffing by a malicious software installed on user's computer.
 
-The information stored inside flat blob structure is presented as
-a filesystem-like structure. This can be achieved since blobs
-contain directory and link entries conne ting different blobs
-together in one global blob graph.
+Since the user's password usually tends to be the weakest point in novadays
+application, Cinode does use cryptographic assymetric keys instead. In order
+to login, such key must be provided by the user. Similarly to how openssh
+keys are protrcted, the key may require an extra passphrase before it can
+be used.
 
-In order to securely execute applications, each one
-is executer on it's own "virtual" randomized hostname
-provided by the prpxy. It helps making sure that
-given application does access it's own resources
-and also hardens the possibility to sniff user's
-information by malicious software.
-
-The Cinode's startup page (the one provided by
-a successful login) is protected in a simillar
-way.
-
-Since the user's password trnds to be a weakest poin
-in most of secure solutions, Cinode does use cryptographic
-keys instead. In order to login, such key must be provided
-by the user. Similarly to how openssh keys are protrcted,
-the key may require an extra passphrase.
+The master key and optional password is the first location the web proxy
+shows to the user. After successfull login, the user is presented a master
+panel where he can view installed applications, browser for files,
+share nodes etc.
