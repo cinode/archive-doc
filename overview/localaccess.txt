@@ -50,7 +50,7 @@ filesystem doesn't see blobs: a1, a2, a3, a4 and a5. The shared part
 (s1, s3, s3 and s4) can be accessed by both users.
 
 The filesystem can be easily accessed and manipulated through a simple
-web api provided by the proxy. This is especially usefull to Cinode-based
+web API provided by the proxy. This is especially useful to Cinode-based
 applications. Each one of them is executed in a safe sandbox by using
 a randomized "virtual" hostname. In addition to that, this particular
 hostname provides an access to a particular sub-directory in the user's
@@ -60,13 +60,13 @@ all modern browsers prevents applications from accessing the information
 they were not authorized to. It also increases the complexity of
 sniffing by a malicious software installed on user's computer.
 
-Since the user's password usually tends to be the weakest point in novadays
-application, Cinode does use cryptographic assymetric keys instead. In order
-to login, such key must be provided by the user. Similarly to how openssh
-keys are protrcted, the key may require an extra passphrase before it can
+Since the user's password usually tends to be the weakest point in nowadays
+application, Cinode does use cryptographic asymmetric keys instead. In order
+to login, such key must be provided by the user. Similarly to how openSSH
+keys are protected, the key may require an extra passphrase before it can
 be used.
 
-The master key and optional password is the first location the web proxy
-shows to the user. After successfull login, the user is presented a master
+The master key and optional password screen is the first location the web proxy
+shows to the user. After successful login, the user is presented a master
 panel where he can view installed applications, browser for files,
 share nodes etc.

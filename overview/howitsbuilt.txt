@@ -3,7 +3,7 @@ How it's built
 
 The smallest building block of Cinode is a Node. The Node itself is fully functional
 and allow the user to use it's Local Access Interface. The Node itself is using
-a permament storage like local hard drive to store iformation in form of data blobs.
+a permanent storage like local hard drive to store information in form of data blobs.
 
 Nodes can communicate between themselves using secure connections. Those communication
 channels are needed to exchange blobs between Nodes. This data migration is used to 
@@ -15,15 +15,15 @@ Distributed Hash Table (DHT) to be used in order to allow searching for a partic
 blob.
 
 He Local interface available to he user is presented in a form
-of a filesystem accessible through a http web proxy. Applicatoons
+of a filesystem accessible through a HTTP web proxy. Applications
 hosted inside Cinode are also loaded from this filesystem. They
 are executed locally on the user's machine and have access to
 a part of the filesystem being app's execution environment.
 
-In order to alow users communicate hrough Cinode
+In order to allow users communicate through Cinode
 applications, given filesystem directory or file
 can be shared with another user. Such shared resource
 can be hen plugged into the filesystem of another user
-becomming available for his own instance of the applicaton.
-The share is realised by moving blobs between nodes. This
+becoming available for his own instance of the application.
+The share is realized by moving blobs between nodes. This
 process is fully automatic from the user's point of view.

@@ -67,9 +67,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="-553.8054"
-     inkscape:cy="252.78467"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="425.79412"
+     inkscape:cy="96.599484"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -715,25 +715,6 @@
        id="path8623"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccczzzzzc" />
-    <text
-       xml:space="preserve"
-       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="184.17418"
-       y="586.80811"
-       id="text8625"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan8627"
-         x="184.17418"
-         y="586.80811">Cross-Node</tspan><tspan
-         sodipodi:role="line"
-         x="184.17418"
-         y="605.55811"
-         id="tspan8629">Connection</tspan><tspan
-         sodipodi:role="line"
-         x="184.17418"
-         y="624.30811"
-         id="tspan8633">Interface</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 620.08792,553.16127 -132.77818,-0.067 0,91.67135 134.15948,0 c 0,0 -12.01604,-5.30342 -11.64536,-14.31393 0.37068,-9.01052 6.01423,-10.93356 6.10433,-18.37811 0.0901,-7.44455 -5.69382,-10.7003 -5.61705,-17.58925 0.0768,-6.88896 6.33451,-8.69596 6.13936,-15.59819 -0.19514,-6.90224 -6.04676,-8.92168 -5.84458,-15.77553 0.20217,-6.85384 9.482,-9.94937 9.482,-9.94936 z"
@@ -823,5 +804,42 @@
        inkscape:connection-start-point="d4"
        inkscape:connection-end="#g7233"
        inkscape:connection-end-point="d4" />
+    <text
+       xml:space="preserve"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="182.27643"
+       y="578.87915"
+       id="text8625"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8627"
+         x="182.27643"
+         y="578.87915">Cross-Node</tspan><tspan
+         sodipodi:role="line"
+         x="182.27643"
+         y="597.62915"
+         id="tspan8629">Connection</tspan><tspan
+         sodipodi:role="line"
+         x="182.27643"
+         y="616.37915"
+         id="tspan8633">Interface</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="130.09589"
+       y="638.59863"
+       id="text3916"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3918"
+         x="130.09589"
+         y="638.59863">DHT</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 100.17857,570.24107 0,-26.875 -50.758927,0"
+       id="path3922"
+       inkscape:connector-curvature="0"
+       transform="translate(71.876341,75.65625)"
+       sodipodi:nodetypes="ccc" />
   </g>
 </svg>

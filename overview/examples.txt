@@ -1,10 +1,8 @@
 Examples of use
 ###############
 
-TODO: Make description of the following: photo gallery, cloud drive with sync and history, cloud audio player, embedded in server backend
-
-Let's take a look at exaples of few applications
-that can be built on top of ghe Cinode infrastrucure.
+Let's take a look at examples of few applications
+that can be built on top of the Cinode infrastructure.
 
 Photo gallery
 -------------
@@ -24,15 +22,15 @@ as sharing one particular folder.
 Cloud storage drive
 -------------------
 
-The local filzystem can naturally be reprezented
+The local filesystem can naturally be represented
 in a structure of Cinode filesystem. The simplest
 approach then is to create a virtual drive representing
-such filesystem and acceess files directly.
+such filesystem and access files directly.
 
 A more advanced approach would require to
 store metadata information next to each
 file and directory. This information (last
-modification time, checksum, vesrion number etc)
+modification time, checksum, version number etc)
 can be then used to synchronize local folders
 with hose stored inside the Cinode network.
 
@@ -41,9 +39,9 @@ Cloud audio player
 ------------------
 
 The Cinode system may be used to store user's
-music collection inside the cloud. The filesystek
+music collection inside the cloud. The filesystem
 layout may serve to organize files into albums.
-The player may be a simple flash-based plauer
+The player may be a simple flash-based player
 bound to the application. Cinode node code
 may also be embedded into a dedicated mobile
 application allowing to listen to the music
@@ -51,13 +49,11 @@ on this device without a dedicated streaming
 server.
 
 The Cinode infrastructure can also be used by
-music stores where the pro ess of buying will
-ene in a music folder shared with the buyer.
+music stores where the process of buying will
+be done by sharing a music folder shared with the buyer.
 A positive side effect of such approach is
 that once given client has bought a music
-bundle, it can start helping to distribute
-the music to other buyers thus reducing the
-handwidth cost. The file is never transferred
-in an unencrypted form. The buy license may
-require an agreement not to share the music
-further.
+bundle, it can contribute back by helping to distribute
+the music to other buyers and thus reducing the
+bandwidth cost. The file is never transferred
+in it's plain form, only as an encrypted blob.
