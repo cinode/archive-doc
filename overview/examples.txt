@@ -11,12 +11,14 @@ The structure of photo albums can very easily
 be represented in a directory structure of application's
 local data folder. Albums are represented by folder's
 directory structure, pictures in the album being
-simple filed. In addition to this information,
+simple files. In addition to this information,
 each photo may have it's metadata folder containing
-thumbnails, ratings and comments.
+thumbnails, ratings, comments etc.
 
 Sharing given album with a friend is as simple
-as sharing one particular folder.
+as sharing one particular album's folder with him.
+Sharing it with write access rights allows us building
+complex hierarchical albums structure.
 
 
 Cloud storage drive
@@ -25,35 +27,13 @@ Cloud storage drive
 The local filesystem can naturally be represented
 in a structure of Cinode filesystem. The simplest
 approach then is to create a virtual drive representing
-such filesystem and access files directly.
+such filesystem and access files directly through such
+virtual drive.
 
-A more advanced approach would require to
-store metadata information next to each
+A more advanced approach would require
+storing metadata information next to each
 file and directory. This information (last
 modification time, checksum, version number etc)
 can be then used to synchronize local folders
-with hose stored inside the Cinode network.
+with those stored inside the Cinode network.
 
-
-Cloud audio player
-------------------
-
-The Cinode system may be used to store user's
-music collection inside the cloud. The filesystem
-layout may serve to organize files into albums.
-The player may be a simple flash-based player
-bound to the application. Cinode node code
-may also be embedded into a dedicated mobile
-application allowing to listen to the music
-on this device without a dedicated streaming
-server.
-
-The Cinode infrastructure can also be used by
-music stores where the process of buying will
-be done by sharing a music folder shared with the buyer.
-A positive side effect of such approach is
-that once given client has bought a music
-bundle, it can contribute back by helping to distribute
-the music to other buyers and thus reducing the
-bandwidth cost. The file is never transferred
-in it's plain form, only as an encrypted blob.

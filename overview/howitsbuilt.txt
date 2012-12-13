@@ -1,29 +1,31 @@
 How it's built
 ##############
 
-The smallest building block of Cinode is a Node. The Node itself is fully functional
-and allow the user to use it's Local Access Interface. The Node itself is using
-a permanent storage like local hard drive to store information in form of data blobs.
+The smallest building block of the Cinode is a Node. The Node itself is fully functional
+and allow the user to use it's Local Access Interface. It is using a permanent storage
+such as a local hard drive to store information. All data is organized in form of
+data blobs.
 
 Nodes can communicate between themselves using secure connections. Those communication
 channels are needed to exchange blobs between Nodes. This data migration is used to 
-create backups of data and to create local blob cache to be quickly accessible by the
+create backups of data and to create local blob cache that can be quickly accessed by the
 user.
 
 Every data blob is uniquely named using hash-based identifier. This allows a global
-Distributed Hash Table (DHT) to be used in order to allow searching for a particular
-blob.
+Distributed Hash Table (DHT) to be used in order to allow searching for a node holding
+particular blob.
 
-He Local interface available to he user is presented in a form
-of a filesystem accessible through a HTTP web proxy. Applications
+The Local interface available to the user is presented in a form
+of a filesystem accessible through it's built-in HTTP web proxy. Applications
 hosted inside Cinode are also loaded from this filesystem. They
 are executed locally on the user's machine and have access to
 a part of the filesystem being app's execution environment.
 
-In order to allow users communicate through Cinode
+In order to allow users to communicate through Cinode
 applications, given filesystem directory or file
 can be shared with another user. Such shared resource
-can be hen plugged into the filesystem of another user
+can be then plugged into the filesystem of another user
 becoming available for his own instance of the application.
-The share is realized by moving blobs between nodes. This
-process is fully automatic from the user's point of view.
+Internally this share is realized by moving blobs between nodes. This
+process is fully automatic from the user's point of view and
+doesn't need any extra user's activity.

@@ -3,21 +3,21 @@ Local access interface
 
 The user can access the Cinode by a web proxy server built into the
 node software. It can be disabled creating a node that participates
-in cross-blob traffic only. Such configuration would create
+in cross-blob traffic only,
 a server-like node not accessible by standard user interface.
 
 The HTTP proxy interface provides an easy to use web panel viewable
-by any standard web browser. It also allows execution of client-side
-web-based applications such as javascript apps, native client code or
-similar. Files needed to execute such application are also hosted
-on the Cinode network.
+by any modern web browser. It also allows execution of client-side
+web-based applications written in javascript, native client code or
+similar technology. Files needed to execute such application are also hosted
+on the Cinode network removing any dependency for external services.
 
 All information hosted inside Cinode network is stored inside data blobs.
 They can form a structure similar to a filesystem due to a presence of
 directory and link blobs. The actual structure is a bit more complex and
 is called blob graph. From the algorithmic point of view, this graph
-is a directed cyclic one.  User's Cinode-hosted filesystem is a part of it
-with one blob promoted to be an entry point to filesystem's root directory:
+is a directed cyclic one.  User's Cinode-hosted filesystem is a part of this graph
+with one blob promoted to be an entry point to user's root directory:
 
 .. graphviz::
 
@@ -57,8 +57,8 @@ hostname provides an access to a particular sub-directory in the user's
 filesystem blocking any access outside the sandbox. The randomized
 hostname for every application and same-origin policy implemented in
 all modern browsers prevents applications from accessing the information
-they were not authorized to. It also increases the complexity of
-sniffing by a malicious software installed on user's computer.
+they were not authorized to. It also hardens any sniffing attempts
+by a malicious software installed locally on user's computer.
 
 Since the user's password usually tends to be the weakest point in nowadays
 application, Cinode does use cryptographic asymmetric keys instead. In order

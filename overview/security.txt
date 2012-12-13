@@ -1,24 +1,24 @@
 The security
 ############
 
-Security is the most important Cinode's factor. The lack of server side forces us
-to use alternative methods to usual user authorization. The approach that has
+Cinode was built with security in ming. The lack of server side forces us
+to use alternative methods for user authorization. The approach that has
 been used is based on cryptography.
 
 Every blob in the Cinode network is stored and transferred to other nodes in an
-encrypted form. The ability to decrypt this data (so hacking a decryption key) equals
-a read access then.
+encrypted form. The ability to decrypt this data (knowing the decryption key) equals
+a read access.
 
 In addition, each blob reveals extra cryptographic properties similar to
-digital signatures and cryptographic hashes. These properties are used
-to validate blob and make sure hat it's content was created, modified
-or simply agreed by authorized user. Simply put, it's equal write access
+digital signatures. These properties are used
+to validate blob and make sure that it's content was created, modified
+or simply accepted by an authorized user. Simply put, it's equal to write access
 authorization. The creator/modifier/acceptor of the blob must be in a
-possession of all information needed to make the blob valid. A good example
-of such information is a private key used to sign blob's content.
+possession of all information needed to make the blob valid
+such as a private key used to sign blob's content.
 
 The blob validation process does not require read access rights
-(the encryption key). By doing so, nodes can safely exchange
-blobs between them without reading actual blob content allowing
-secure backups, load balancing and blob proxies.
+(the data encryption key). By doing so, nodes can safely exchange
+blobs between them without revealing the actual blob content. This allows
+secure backups, load balancing and blob proxies hosted by 3rd parties.
 

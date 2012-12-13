@@ -2,26 +2,26 @@ Limitations
 ###########
 
 The Cinode network is quite unusual approach
-to handle networking. Some of it's properties
-make it unsuitable for certain applications.
+to handle cloud services. Some of it's properties
+make it unsuitable for certain types of applications.
 There are known limitations of the current Cinode architecture.
-Some of them can be and will be fixed in the future versions,
-others are tightly bound to the new networking model and thus
-can not be dealt with without changing main properties of the Cinode.
+Some of them can be and will be fixed in future versions,
+others are tightly bound to the uncommon networking model and thus
+can not be dealt with without changing root Cinode's design decisions.
 
 Latency and lack of realtime connectivity
 -----------------------------------------
 
-The network is based on data blobs, floating around
-between nodes, and DHT network used to look for them.
+The network is based on data blobs floating around
+between nodes and DHT network used to look for them.
 This solution, similar to the one used in trackerless
 torrent networks, introduces significant lag between
 the time a search is initiated and the time of final
 blob's arrival. It greatly reduces the ability to exchange
 information between nodes where the delivery time
-is crucial, especially while dealing with a lot of small
-data packets. A low latency is especially needed for
-realtime collaboration software for video and voice chats.
+is critical, especially while dealing with a lot of small
+data packets. To show an example, a low latency is needed in
+realtime collaboration software that use video and voice chats.
 
 This limitation can be relaxed in the future
 by introducing direct connectivity between
@@ -33,16 +33,43 @@ outside Cinode structure.
 The always-remember nature of the network
 -----------------------------------------------
 
-In Cinode there's no central management unit that could
+There's no central management unit in Cinode that could
 force some blobs to be permanently removed. Any blob
 that was sent to the network may stay there for unspecified
 amount of time. This introduces potential security threat
-due to the fact that some ciphers are being cracked over time.
+due to the fact that some ciphers may be cracked over time.
 
 Future versions of the protocol may include the ability 
 to instruct other nodes to remove a particular blob.
-The actual fact of removing data can never
-be guaranteed in 100% though.
+But even if this method is implemented, the actual fact
+of removing data can never be guaranteed in 100%.
+
+Sniffing nodes
+--------------
+
+One form of malicious software existing in the network
+will be a sniffing node. A base node's functionality may be
+extended to store as much information from the network
+as possible, gathering information for statistical analysis
+and for possible future cracking attempts.
+
+Although current version does implement read access
+authorization, it's security relies on the unbreakability
+of encryption algorithms applied there.
+
+Due to the issue just presented, we highly encourage not to
+put any confidential, personal or sensitive information
+into the network during the current phase of it's existence.
+It's highly probable that some security issues are still present
+int the sofrware. Instead, we propose to put publicly available
+information to the network first to gain reasonable amount 
+of information used for testing purposes.
+
+Future Cinode versions will implement ability to
+restrict read access even more so that it's impossible
+to even download the encrypted content without proving
+that read access rights have been granted. 
+
 
 Encryption overhead
 -------------------
@@ -52,25 +79,7 @@ standards. The tradeoff between encryption efficiency
 and the security is an always-win for the security.
 The "always-remember" nature of the network requires
 us to use the highest know security model since
-the data we store today may be used in decryption
-attacks in 10 years or more. The protocol can
-of course be altered later but it won't magically
-remove data blobs created earlier. This becomes really
-crucial due to a high probability that there would be
-nodes dedicated to grab every peace of information they
-can from the Cinode.
+the data we store today may be used in future decryption
+attacks. The increased key sizes and stronger algorithms
+may result in increased need for computational power. 
 
-A partial solution to this kind of problem is to implement
-additional read access checks done when one node requests
-blob from another one. This check should be done although
-the blob is still encrypted. It comes with multiple
-implications though so it won't be included in the first
-version of the protocol.
-
-Due to the presented issue, we highly encourage not to
-put any confidential, personal or sensitive information
-into the network during the first phase of it's existence
-when it's highly probable to find bugs related to the security. 
-Instead, we propose to put publicly available information
-to the network first to gain reasonable amount of information
-to be used for testing purposes.
