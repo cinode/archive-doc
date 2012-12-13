@@ -4,12 +4,8 @@ The blobstore
 
 TODO: Introduction and requirements for each blob
 
-.. include:: staticfileblob.txt
+.. include:: validation.txt
 
-.. include:: staticsplitfileblob.txt
+.. include:: serialization.txt
 
-.. include:: staticdirblob.txt
-
-.. include:: staticsplitdirblob.txt
-
-.. include:: dynamiclinkblob.txt
+.. include:: blobtypes.txt
