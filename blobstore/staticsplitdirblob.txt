@@ -1,4 +1,4 @@
-Static Splitted Directory Blob
-##############################
+Static Split Directory Blob
++++++++++++++++++++++++++++
 
 TODO

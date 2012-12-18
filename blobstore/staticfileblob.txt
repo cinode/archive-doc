@@ -1,11 +1,9 @@
 Static File Blob
-################
+++++++++++++++++
 
-This blob is used to hold the content of files of size
-up to 16MB. For files of a larger size, static splitted
-file blob must be used.
+This blob is used to hold the content of files of size up to 16MB.
+For files of a larger size, static split file blob must be used.
 
 The content is a buffer holding file's content.
 
-This blob must be validated uwing the hash-based
-method.
+This blob must be validated using the hash-based method.
