@@ -1,1 +1,46 @@
-Todo: serialization
+Basic serialization rules
++++++++++++++++++++++++++
+
+Blobs use very simple rules for serializing and deserializing
+information.
+
+Integer
+-------
+
+Integers are stored in a sequence or bytes. Each byte consists
+of 7value bits (lower bits). The eight bit indicates whether
+this is the last byte of the value. If it's 1, we continue parsing
+the number, if it's zero, we dtop parsing at current byte.
+Bits of the serialized value are stored starting with lower bits.
+The integer must be stored in the shortest sequence. This means
+that value of 0x80 is allowed in first byte only.
+
+Data buffer
+----------
+
+Data buffer consists of two parts:
+- integer indicsting the length of buffer in bytes
+- sequence of bytes - yhe contebt of a buffer, number
+  of bytes is taken from the preceeding integer
+
+
+String
+-------
+
+String is stored as a data buffer that's an UTF8 representation
+of the string.
+
+Set
+----
+
+Data starts with an integer being the number of entries
+followed by entries representation (depends on it's type).
+
+
+Map
+------
+
+Data starts with an integer being the number of entries
+followed by data of each entry. Every entry consist
+of the data pf key followed by the data of value.
+

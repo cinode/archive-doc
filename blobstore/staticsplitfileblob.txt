@@ -1,4 +1,12 @@
 Static Splitted File Blob
 #########################
 
-TODO
+This blob is used to hold the content of
+files of size of at least 16MB.
+
+The content of this blob starts with an integer
+holding the cumulative size of the file. It's then
+followed by an array of entries,  every entry holding
+two strings - first one being an id of the blob holding
+the content or blob's part, the secone beong an encryption
+key fo the blob.

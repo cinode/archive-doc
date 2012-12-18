@@ -1,8 +1,11 @@
 Blob types
 ++++++++++++++
 
-
-TODO: Some introduction to this section
+This section describes all types of blibs available
+in the cinode network. Each blob contains
+information about the interpretation of it's content,
+source or it's encryption key and validation methods
+allowed for this blob type.
 
 .. include:: staticfileblob.txt
 
