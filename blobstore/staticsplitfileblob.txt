@@ -3,7 +3,15 @@ Static Split File Blob
 
 This blob is used to hold the content of files of size of at least 16MB.
 
-The content of this blob starts with an integer holding the cumulative
-size of the file. It's then followed by an array of entries, every entry
-holding two strings - first one being an id of the blob holding the
-content or blob's part, the second being an encryption key of the blob.
+The content or the file consists of following fields:
+ - Identification: Integer of value 0x02
+ - Cumulative file size: Integer
+ - Array with a list of blobs containing parts of the file,
+  when concatenated sequentially they form content of the file.
+  Each array entry consists of following fields:
+
+   - Blob full id
+   - Blob encryption key
+
+Allowed validation methods are:
+ - hash-based validation

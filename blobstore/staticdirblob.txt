@@ -1,4 +1,23 @@
 Static Directory Blob
 +++++++++++++++++++++
 
-TODO
+This blob contains information about
+directory entries assuming that the
+size of whole blob is not equal or greater
+to 16MB. In case of blob bigger than 16MB
+Static Splitted Dir Blob must be
+used.
+
+The blob's content consists of following fields:
+ - Type identification: Integer or value 0x03
+ - Array of directory entries, sorted by blob names. Each entry
+  consisting of following fields:
+
+   - Entry name
+   - Entry blob full id
+   - Blob encryption key
+   - Blob type integer: 0 - file, 1 - directory
+
+Allowed validation methods:
+ - Hash-based validation
+

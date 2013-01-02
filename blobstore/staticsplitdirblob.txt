@@ -1,4 +1,6 @@
 Static Split Directory Blob
 +++++++++++++++++++++++++++
 
-TODO
+This blob can be usedto represent directories
+with large number of entries by distributing them
+over multiple sparate blobs.
