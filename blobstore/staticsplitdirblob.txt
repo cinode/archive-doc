@@ -1,6 +1,6 @@
 Static Split Directory Blob
 +++++++++++++++++++++++++++
 
-This blob can be usedto represent directories
+This blob can be used to represent directories
 with large number of entries by distributing them
-over multiple sparate blobs.
+over multiple separate blobs.

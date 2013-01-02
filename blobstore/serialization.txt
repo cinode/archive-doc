@@ -1,7 +1,7 @@
 Basic serialization rules
 +++++++++++++++++++++++++
 
-Blobs use very simple rules for serializing and deserializing
+Blobs use very simple rules for serializing and unserializing
 information.
 
 Integer

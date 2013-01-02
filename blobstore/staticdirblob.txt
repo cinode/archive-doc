@@ -5,8 +5,7 @@ This blob contains information about
 directory entries assuming that the
 size of whole blob is not equal or greater
 to 16MB. In case of blob bigger than 16MB
-Static Splitted Dir Blob must be
-used.
+Static Split Dir Blob must be used.
 
 The blob's content consists of following fields:
  - Type identification: Integer or value 0x03
