@@ -17,3 +17,5 @@ can be found in the documentation of validation methods.
 .. include:: staticsplitdirblob.txt
 
 .. include:: dynamiclinkblob.txt
+
+.. include:: blobtypessummary.txt
