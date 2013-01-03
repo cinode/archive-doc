@@ -5,8 +5,11 @@ This blob is used to hold the content of files of size up to 16MB.
 For files of a larger size, static split file blob must be used.
 
 The content is made of the following fields:
- - The identification byte or value 0x01
+
+ - Type identification: Integer of value 0x01
+ - Sub-type identification: Integer of value 0x01
  - The buffer holding file's content
 
-Allowed validation methods:
+Validation method / blob id generator:
+
   - hash-based validation

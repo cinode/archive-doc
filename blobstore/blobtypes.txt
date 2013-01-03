@@ -3,9 +3,10 @@ Blob types
 
 This section describes all types of blobs available in the Cinode network.
 Each blob contains information about the interpretation of it's content
-and validation methods allowed for this blob type. The information about
-how the encryption key for blob's data is generated can be found in the
-documentation of validation methods.
+and validation methods allowed for this blob type.
+
+The information about how the encryption key for blob's data is generated
+can be found in the documentation of validation methods.
 
 .. include:: staticfileblob.txt
 

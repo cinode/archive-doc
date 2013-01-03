@@ -3,20 +3,25 @@ Static Directory Blob
 
 This blob contains information about
 directory entries assuming that the
-size of whole blob is not equal or greater
-to 16MB. In case of blob bigger than 16MB
-Static Split Dir Blob must be used.
+number of entries is not greater or equal
+to 1024. In case of blob with greater number of entries,
+Static Split Directory Blob must be used.
 
 The blob's content consists of following fields:
- - Type identification: Integer or value 0x03
+
+ - Type identification: Integer of value 0x02
+ - Sub-type identification: Integer of value 0x01
  - Array of directory entries, sorted by blob names. Each entry
-  consisting of following fields:
+   consisting of following fields:
 
-   - Entry name
-   - Entry blob full id
-   - Blob encryption key
-   - Blob type integer: 0 - file, 1 - directory
+   - Name: String (must not be empty)
+   - Blob FID: String
+   - Blob KEY: String
+   - Type: Integer, 0x1 - file, 0x2 - directory (must be consistent
+     with the Type identification field of the blob that holds the actual
+     content - after resolving all links)
 
-Allowed validation methods:
+Validation method / blob id generator:
+
  - Hash-based validation
 

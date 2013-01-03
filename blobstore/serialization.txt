@@ -7,19 +7,34 @@ information.
 Integer
 -------
 
-Integers are stored in a sequence or bytes. Each byte consists
-of 7value bits (lower bits). The eight bit indicates whether
-this is the last byte of the value. If it's 1, we continue parsing
-the number, if it's zero, we stop parsing at current byte.
-Bits of the serialized value are stored starting with lower bits.
-The integer must be stored in the shortest sequence. This means
-that value of 0x80 is allowed in first byte only.
+Integers are stored as a sequence of bytes. Each byte consists
+of two parts. The lower 7 bits are made by cutting next 7 bits of
+serialized value (starting with lower bits). The eight bit of serialized
+byte indicates whether the value encoding need more byte(s). The value of 1
+means that at least one more byte is needed, the value of 0 means this is
+the last byte of serialized data for this integer. The integer must be
+stored using the shortest sequence of bytes. The value can not be padded with
+zeroes at the highest bits to increase the length of serialized data.
+
+Here are few examples of data encoding:
+
+=======   ===============    ===============   =====================
+Value     Binary value       Encoded form      Binary encoded form
+-------   ---------------    ---------------   ---------------------
+0x00      000000000          0x00              00000000
+0x01      000000001          0x01              00000001
+0x7F      001111111          0x7F              01111111
+0x80      010000000          0x80 0x01         10000000 00000001
+0x131     100110001          0xB1 0x02         10110001 00000010
+=======   ===============    ===============   =====================
+
 
 Data buffer
 -----------
 
 Data buffer consists of two parts:
- - integer indicating the length of buffer in bytes
+
+ - integer value indicating the length of buffer in bytes
  - sequence of bytes - the content of a buffer
 
 
@@ -29,10 +44,16 @@ String
 String is stored as a data buffer that's an UTF8 representation
 of the string.
 
+Array
+-----
+
+Data starts with an integer being the number of entries
+followed by entries representation (depends on it's type).
+
 Set
 ---
 
-Data starts with an integer being the number of entries
+Similarly to the array, data starts with an integer being the number of entries
 followed by entries representation (depends on it's type).
 
 
@@ -40,6 +61,6 @@ Map
 ---	
 
 Data starts with an integer being the number of entries
-followed by data of each entry. Every entry consist
-of the data pf key followed by the data of value.
+followed by data of each entry. Entry consist
+of the data of key followed by the data of value.
 

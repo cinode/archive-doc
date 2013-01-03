@@ -2,5 +2,5 @@ Static Split Directory Blob
 +++++++++++++++++++++++++++
 
 This blob can be used to represent directories
-with large number of entries by distributing them
-over multiple separate blobs.
+with a number of entries greater or equal to 1024
+by distributing them over multiple separate blobs.
