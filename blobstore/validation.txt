@@ -12,7 +12,9 @@ through the network.
 
 The validation process must be done in a cryptographic
 way so that there are no known practical attacks that
-could make the validation process useless.
+could make the validation process useless. The BID identifier
+is also used during this process to prevent overwriting
+the blob by generating a new one with the same BID.
 
 Next sections describe currently used validation methods.
 Future versions of the protocol may extend this set
