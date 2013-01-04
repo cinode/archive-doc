@@ -7,7 +7,6 @@ For files of a larger size, static split file blob must be used.
 The content is made of the following fields:
 
  - Type identification: Integer of value 0x01
- - Sub-type identification: Integer of value 0x01
  - The buffer holding file's content
 
 Validation method / blob id generator:

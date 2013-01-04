@@ -5,15 +5,14 @@ This blob is used to hold the content of files of size of at least 16MB.
 
 The content or the file consists of following fields:
 
- - Type identification: Integer of value 0x01
- - Sub-type identification: Integer of value 0x02
+ - Type identification: Integer of value 0x02
  - Cumulative file size: Integer
  - Array with a list of blobs containing parts of the file,
    when concatenated sequentially they form content of the file.
    Each array entry consists of following fields:
 
-   - Blob FID: String
-   - Blob KEY: String
+   - BID: String
+   - Data KEY: String
 
 Validation method / blob id generator:
 

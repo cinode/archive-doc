@@ -9,17 +9,13 @@ Static Split Directory Blob must be used.
 
 The blob's content consists of following fields:
 
- - Type identification: Integer of value 0x02
- - Sub-type identification: Integer of value 0x01
+ - Type identification: Integer of value 0x11
  - Array of directory entries, sorted by blob names. Each entry
    consisting of following fields:
 
    - Name: String (must not be empty)
-   - Blob FID: String
-   - Blob KEY: String
-   - Type: Integer, 0x1 - file, 0x2 - directory (must be consistent
-     with the Type identification field of the blob that holds the actual
-     content - after resolving all links)
+   - BID: String
+   - Data KEY: String
 
 Validation method / blob id generator:
 
