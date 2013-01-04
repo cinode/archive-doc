@@ -44,7 +44,7 @@ the unencrypted blob's content. This means that given data will always
 have the same encrypted representation and will allow global anonymous
 data deduplication.
 
-TODO: Diagram of a data dependencies / connections
+.. image:: hashvalidation.*
 
 
 Sign-based validation
@@ -96,4 +96,4 @@ The validation of a blob is made in the following steps:
 
  - The digital sign of content and version number is validated
 
-TODO: Diagram of a data dependencies / connections
+.. image:: signvalidation.*
