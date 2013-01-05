@@ -12,9 +12,10 @@ web-based applications written in javascript, native client code or
 similar technology. Files needed to execute such application are also hosted
 on the Cinode network removing any dependency for external services.
 
-All information hosted inside Cinode network is stored inside data blobs.
+All information hosted inside the Cinode network is stored inside data blobs.
 They can form a structure similar to a filesystem due to a presence of
-directory and link blobs. The actual structure is a bit more complex and
+directory and link blobs. The actual structure is a bit more complex 
+than a directory tree and
 is called blob graph. From the algorithmic point of view, this graph
 is a directed cyclic one.  User's Cinode-hosted filesystem is a part of this graph
 with one blob promoted to be an entry point to user's root directory:

@@ -1,7 +1,7 @@
 The security
 ############
 
-Cinode was built with security in ming. The lack of server side forces us
+Cinode was built with security in mind. The lack of server side forces us
 to use alternative methods for user authorization. The approach that has
 been used is based on cryptography.
 

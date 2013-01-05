@@ -28,4 +28,4 @@ can be then plugged into the filesystem of another user
 becoming available for his own instance of the application.
 Internally this share is realized by moving blobs between nodes. This
 process is fully automatic from the user's point of view and
-doesn't need any extra user's activity.
+doesn't need any extra activity.

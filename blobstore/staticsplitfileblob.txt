@@ -2,6 +2,9 @@ Static Split File Blob
 ++++++++++++++++++++++
 
 This blob is used to hold the content of files of size of at least 16MB.
+The file content is spread among a number of other blobs, each one of
+Static File type. The size of those blobs must be 16MB with the exception
+of the last one that's using the remaining part of data. 
 
 The content or the file consists of following fields:
 

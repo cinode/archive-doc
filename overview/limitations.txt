@@ -61,7 +61,7 @@ Due to the issue just presented, we highly encourage not to
 put any confidential, personal or sensitive information
 into the network during the current phase of it's existence.
 It's highly probable that some security issues are still present
-int the sofrware. Instead, we propose to put publicly available
+in the software. Instead, we propose to put publicly available
 information to the network first to gain reasonable amount 
 of information used for testing purposes.
 

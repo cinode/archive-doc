@@ -8,7 +8,7 @@ creating a global blob namespace.
 
 The data unit in the blobstore is a called a data blob. It's
 main purpose is to contain some information, usually in an encrypted form.
-The knowledge of blob's data key (DKEY) equals read authorization.
+The knowledge of blob's data decryption key equals read authorization.
 In addition to the content encryption, the blob reveals extra cryptographic
 properties used to validate whether an authrized user created the content
 of the blob. This mechanism is used to implement write authorization.
