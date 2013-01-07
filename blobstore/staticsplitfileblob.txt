@@ -6,7 +6,7 @@ The file content is spread among a number of other blobs, each one of
 Static File type. The size of those blobs must be 16MB with the exception
 of the last one that's using the remaining part of data. 
 
-The content or the file consists of following fields:
+The content of the file consists of following fields:
 
  - Type identification: Integer of value 0x02
  - Cumulative file size: Integer
@@ -14,7 +14,7 @@ The content or the file consists of following fields:
    when concatenated sequentially they form content of the file.
    Each array entry consists of following fields:
 
-   - BID: String
+   - BID: String, The blob must be of type: Static File Blob (0x01)
    - Data KEY: String
 
 Validation method / blob id generator:
