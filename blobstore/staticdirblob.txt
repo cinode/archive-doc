@@ -1,10 +1,10 @@
 Static Directory Blob
-+++++++++++++++++++++
+---------------------
 
 This blob contains information about
 directory entries assuming that the
-number of entries is not greater or equal
-to 1024. In case of blob with greater number of entries,
+number of entries is not greater than 1024.
+In case of blob with greater number of entries,
 Static Split Directory Blob must be used.
 
 The blob's content consists of following fields:

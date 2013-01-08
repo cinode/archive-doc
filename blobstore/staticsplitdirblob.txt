@@ -1,11 +1,11 @@
 Static Split Directory Blob
-+++++++++++++++++++++++++++
+---------------------------
 
 This blob can be used to represent directories
-with a number of entries greater or equal to 1024
+with a number of entries greater than 1024
 by distributing them over multiple separate blobs.
-The number of sub-blobs ( SubCount ) that will be used is calculated
-using the following formula:
+The number of sub-blobs - *SubCount* that will be used,
+is calculated using the following formula:
 
 .. math::
 
@@ -15,32 +15,34 @@ In order to distribute entries between blobs, following methods
 can be used:
 
 - splitting sorted array (numeric id of method: 0x01)
-	In this method the list of entries sorted by entry name is
-	uniformly split into SubCount parts. The assignment of Nth entry
-	(indexing from 0) to a blob of id BNum (indexing from 0) is as follows:
-	
-	.. math::
+
+  In this method the list of entries sorted by entry name is
+  uniformly split into SubCount parts. The assignment of *Nth* entry
+  ( 0 .. *EntriesCount* -1 ) to a blob of id *BNum* ( 0 .. *SubCount* -1 )
+  is as follows:
+  
+  .. math::
 	
 		BNum = \left\lfloor\frac{N*SubCount}{EntriesCount}\right\rfloor
 		
-	This method should be used when there's a need to scan entry ranges
-	(i.e. list all entries with names between 'alice' and 'bob') but may
-	theoretically reveal some information whiles analyzing changes of
-	sub blobs
+  This method should be used when there's a need to scan entry ranges
+  (i.e. list all entries with names between 'alice' and 'bob') but may
+  reveal some information during sub-blob analysis.
 
 - distribute using hash function similarly to bucket in the hash table (numeric id of method: 0x02)
-	In this method, a hash of the entry name is used to find the 
-	desired blob number. The hash is calculated as first four bytes
-	of the SHA-256 function applied on UTF-8 encoded file name.
-	The assignment of blob with name N to a subblob of id Bnum is done
-	as follows:
-	
-	.. math::
+
+  In this method, a hash of the entry name is used to find the 
+  desired blob number. The hash is calculated as first four bytes
+  of the SHA-256 function applied on UTF-8 encoded file name.
+  The assignment of blob with name *N* to a subblob of id *BMum* is done
+  as follows:
+  
+  .. math::
 	
 		BNum = \left\lfloor\frac{hash(name)*SubCount}{2^{32}}\right\rfloor
 		
-	This method gives much greater cryptographic security since adding names topologically
-	close to themselves may result in distant sub-blobs. It's the preferred method.  
+  This method gives much greater cryptographic security since adding names topologically
+  close to themselves may result in distant sub-blobs. It's the preferred method.  
 
 The content of the file consists of following fields:
 

@@ -1,5 +1,5 @@
 Static File Blob
-++++++++++++++++
+----------------
 
 This blob is used to hold the content of files of size up to 16MB.
 For files of a larger size, static split file blob must be used.
