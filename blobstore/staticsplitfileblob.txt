@@ -14,8 +14,8 @@ The content of the file consists of following fields:
    when concatenated sequentially they form content of the file.
    Each array entry consists of following fields:
 
-   - BID: String, The blob must be of type: Static File Blob (0x01)
-   - Data KEY: String
+   - BID: String, Id of the sub-blob, the blob must be of type: Static File Blob (0x01)
+   - Data KEY: String, Key for sub-blob's data
 
 Validation method / blob id generator:
 
