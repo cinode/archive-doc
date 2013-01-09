@@ -1,4 +1,23 @@
 Dynamic Link Blob
 +++++++++++++++++
 
-TODO
+The purpose of this blob is to link to another blob. It does not use the hash-based validation
+method so that the value of a particular link blob can change over the time (in a contrast to
+static blobs). A good example of it's usage is to create a blob id that can be shared with
+another user ensuring that this user will also see the changes made to this content.
+
+The blob's unencrypted content consists of the following information:
+
+- BID: String, id of the referenced blob
+- KEY: String, encryption key of the referenced blob
+- RESERVED: Integer of value 0 (reserved for future use)
+
+The referenced blob may also be a link so in order to get to the final blob, one must
+apply the dereferencing procedure iteratively for all links discovered up to a certain
+limit of iterations. We suggest a limit of 64 dereferences after which the link may
+be considered broken.
+
+TODO: Assuming that the link will point to a sub-tree that will have another dynamic links
+      inside, we must be able to pass private keys of those child dynamic links assuming
+      the user has the private key of current link - it's needed in order to cascade write
+      access authorization to such sub-links.
