@@ -97,5 +97,10 @@ The validation of a blob is made in the following steps:
      request so that the peer can update it's local version
 
  - The digital sign of content and version number is validated
+ 
+ TODO: Consider requiring some "random" bytes at the beginning of the Unencrypted Data or
+       to provide different initialization vectors for it. This may be needed if blobs using
+       this validation method don't change initial bytes (16 for AES), what would result
+       in unaltered initial bytes in the encrypted version too.
 
 .. image:: signvalidation.*
