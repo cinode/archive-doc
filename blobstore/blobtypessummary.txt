@@ -1,12 +1,17 @@
 Summary of blob types
 +++++++++++++++++++++
 
-============================  =======  ==========  ==================================================================================
-Blob type                     TypeId   Validation  Description
-----------------------------  -------  ----------  ----------------------------------------------------------------------------------
-Static File Blob                0x01   Hash-based  Store content of a file with size less than 16MB
-Static Split File Blob          0x02   Hash-based  Store content of a file with more than 16MB
-Static Directory Blob           0x11   Hash-based  Store list of entries inside a directory for number of entries less than 1024
-Static Split Directory Blob     0x12   Hash-based  Store list of entries inside a directory for number of entries more than 1024
-Dynamic Link Blob               0x31   Sign-based  Store a link to another blob
-============================  =======  ==========  ==================================================================================
++-----------------------------+--------+------------+----------------------------------------------------------------------------------+
+| Blob type                   | TypeId | Validation | Description                                                                      |
++=============================+========+============+==================================================================================+
+| Static File Blob            |   0x01 | Hash-based | Store content of a file with size less than 16MB                                 |
++-----------------------------+--------+------------+----------------------------------------------------------------------------------+
+| Static Split File Blob      |   0x02 | Hash-based | Store content of a file with more than 16MB                                      |
++-----------------------------+--------+------------+----------------------------------------------------------------------------------+
+| Static Directory Blob       |   0x11 | Hash-based | Store list of entries inside a directory for number of entries less than 1024    |
++-----------------------------+--------+------------+----------------------------------------------------------------------------------+
+| Static Split Directory Blob |   0x12 | Hash-based | Store list of entries inside a directory for number of entries more than 1024    |
++-----------------------------+--------+------------+----------------------------------------------------------------------------------+
+| Dynamic Link Blob           |   0x31 | Sign-based | Store a link to another blob                                                     |
++-----------------------------+--------+------------+----------------------------------------------------------------------------------+
+

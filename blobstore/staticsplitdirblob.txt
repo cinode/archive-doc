@@ -45,7 +45,7 @@ can be used:
 		BNum = \left\lfloor\frac{hash(name)*SubCount}{2^{32}}\right\rfloor
 
   This method gives much greater cryptographic security since adding names topologically
-  close to themselves may result in distant sub-blobs.
+  close to each other usually results in distant sub-blobs.
 
   This method is preferred and should be used if otherwise not specified.
 
