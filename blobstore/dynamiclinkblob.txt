@@ -10,7 +10,7 @@ The blob's unencrypted content consists of the following information:
 
 - BID: String, id of the referenced blob
 - KEY: String, encryption key of the referenced blob
-- RESERVED: Integer of value 0 (reserved for future use)
+- RESERVED: Integer of value 0 (reserved for write key propagation)
 
 The referenced blob may also be a link so in order to get to the final blob, one must
 apply the dereferencing procedure iteratively for all links discovered up to a certain
