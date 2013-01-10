@@ -22,3 +22,21 @@ The blob validation process does not require read access rights
 blobs between them without revealing the actual blob content. This allows
 secure backups, load balancing and blob proxies hosted by 3rd parties.
 
+Selected encryption algorithms
+------------------------------
+
+* Default hash - SHA-512
+* Default symmetric cipher - AES-256 in CFB chaining mode
+* Default asymmetric cipher - RSA using key of 4096 bits
+
+Consideration of quantum cryptography
+-------------------------------------
+
+Since algorithms applied in the Cinode may need to stand the test of time,
+a quantum cryptography must be taken into account.
+Currently known attacks on symmetric ciphers result in reduction of the
+algorithm's strengthens by factor of 2 so even if SHA-256 is cracked, it would
+have the same strength as SHA-128 which is still fairly good.
+The problem that still persists is the ability to break RSA very easily using
+quantum computing. For this reason, Cinode should consider using post-quantum
+cryptography ciphers such as NTRU in order to prepare for the future.
