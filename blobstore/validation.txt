@@ -46,6 +46,14 @@ the unencrypted blob's content. This means that given data will always
 have the same encrypted representation and will allow global anonymous
 data deduplication.
 
+The IV (initialization vector) for the data encryption
+cipher is zero in al cases. This doesn't reduce the
+security since the cipher initialization is based on a hash
+value that theoretically depends on every bit of the plain
+data. This key different for every blob is sufficient
+enough to prevent any attacks targetted on the beginning
+of encrypted data.
+
 .. image:: hashvalidation.*
 
 
@@ -102,5 +110,14 @@ The validation of a blob is made in the following steps:
        to provide different initialization vectors for it. This may be needed if blobs using
        this validation method don't change initial bytes (16 for AES), what would result
        in unaltered initial bytes in the encrypted version too.
+
+The initialization vector of the cipher is made of the version
+number by padding it's reprezentation with zeroes or choosing
+as mch bytes from the beginning of this representation as required
+by the IV size. The representation uses the same rules as the usual
+serialization of integers. This alteration of the IV every time a
+blob changes will prevent possible attacks towards encrypted data
+where choosing same plain text will produ e same cipher text.
+TODO: How about same version attacks here?
 
 .. image:: signvalidation.*
