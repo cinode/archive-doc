@@ -47,12 +47,11 @@ have the same encrypted representation and will allow global anonymous
 data deduplication.
 
 The IV (initialization vector) for the data encryption
-cipher is zero in al cases. This doesn't reduce the
+cipher is zero in all cases. This doesn't reduce the
 security since the cipher initialization is based on a hash
 value that theoretically depends on every bit of the plain
 data. This key different for every blob is sufficient
-enough to prevent any attacks targetted on the beginning
-of encrypted data.
+enough to guarantee semantic security.
 
 .. image:: hashvalidation.*
 
@@ -105,19 +104,19 @@ The validation of a blob is made in the following steps:
      stored one, the local blob is sent back in a reply to blob update
      request so that the peer can update it's local version
 
- 
- TODO: Consider requiring some "random" bytes at the beginning of the Unencrypted Data or
-       to provide different initialization vectors for it. This may be needed if blobs using
-       this validation method don't change initial bytes (16 for AES), what would result
-       in unaltered initial bytes in the encrypted version too.
-
 The initialization vector of the cipher is made of the version
-number by padding it's reprezentation with zeroes or choosing
-as mch bytes from the beginning of this representation as required
-by the IV size. The representation uses the same rules as the usual
-serialization of integers. This alteration of the IV every time a
-blob changes will prevent possible attacks towards encrypted data
-where choosing same plain text will produ e same cipher text.
-TODO: How about same version attacks here?
+number by padding it's representation with zeroes or cutting the
+serialized representation to the required number of bytes.
+Assuming the Version Number must change every time a new data
+is introduced, it reveals properties of a cryptographic nounce
+and thus can be securely used as the IV. This guarantees
+semantic security.
+
+In case of a kind of attack where the same Version Number is being
+reused, the attacker must already be in a possession of the private key.
+This would make IV to be reused breaking semantic security. But since the
+attacker is already in a possession of the private key and thus also the
+data encryption key, there are no benefits from this kind of attack other
+than disturbance of the validation methods.
 
 .. image:: signvalidation.*
