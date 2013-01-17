@@ -19,8 +19,10 @@ such as a private key used to sign blob's content.
 
 The blob validation process does not require read access rights
 (the data encryption key). By doing so, nodes can safely exchange
-blobs between them without revealing the actual blob content. This allows
-secure backups, load balancing and blob proxies hosted by 3rd parties.
+blobs between themselves without revealing the actual blob content.
+This allows less trusted 3rd parties to offer services like
+secure backups, load balancing and blob proxies without the need to
+reveal the information used by their clients.
 
 Selected encryption algorithms
 ------------------------------
@@ -37,6 +39,7 @@ a quantum cryptography must be taken into account.
 Currently known attacks on symmetric ciphers result in reduction of the
 algorithm's strengthens by factor of 2 so even if SHA-256 is cracked, it would
 have the same strength as SHA-128 which is still fairly good.
-The problem that still persists is the ability to break RSA very easily using
-quantum computing. For this reason, Cinode should consider using post-quantum
+The problem that still persists in the post-quantum era is the ability to break
+widely used asymetric ciphers such as RSA.
+For this reason, Cinode should consider using post-quantum
 cryptography ciphers such as NTRU in order to prepare for the future.

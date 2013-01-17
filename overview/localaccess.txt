@@ -16,8 +16,8 @@ All information hosted inside the Cinode network is stored inside data blobs.
 They can form a structure similar to a filesystem due to a presence of
 directory and link blobs. The actual structure is a bit more complex 
 than a directory tree and
-is called blob graph. From the algorithmic point of view, this graph
-is a directed cyclic one.  User's Cinode-hosted filesystem is a part of this graph
+is called blob graph, directed cyclic one from the algorithmic point of view.
+User's Cinode-hosted filesystem is a part of this graph
 with one blob promoted to be an entry point to user's root directory:
 
 .. graphviz::
@@ -48,7 +48,7 @@ Each user see his own part of the graph and doesn't see the part to
 which he has no reference to. For example user of a1-based filesystem
 doesn't see blobs: b1, b2, b3 and b4. Similarly, the user of b1-based
 filesystem doesn't see blobs: a1, a2, a3, a4 and a5. The shared part
-(s1, s3, s3 and s4) can be accessed by both users.
+(s1, s2, s3 and s4) can be accessed by both users.
 
 The filesystem can be easily accessed and manipulated through a simple
 web API provided by the proxy. This is especially useful to Cinode-based
@@ -69,5 +69,4 @@ be used.
 
 The master key and optional password screen is the first location the web proxy
 shows to the user. After successful login, the user is presented a master
-panel where he can view installed applications, browser for files,
-share nodes etc.
+panel where he can view installed applications, browse for files, share nodes etc.

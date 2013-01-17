@@ -16,7 +16,7 @@ Distributed Hash Table (DHT) to be used in order to allow searching for a node h
 particular blob.
 
 The Local interface available to the user is presented in a form
-of a filesystem accessible through it's built-in HTTP web proxy. Applications
+of a filesystem accessible through node's built-in HTTP web proxy. Applications
 hosted inside Cinode are also loaded from this filesystem. They
 are executed locally on the user's machine and have access to
 a part of the filesystem being app's execution environment.
@@ -26,6 +26,7 @@ applications, given filesystem directory or file
 can be shared with another user. Such shared resource
 can be then plugged into the filesystem of another user
 becoming available for his own instance of the application.
-Internally this share is realized by moving blobs between nodes. This
+Internally this share is realized by cresting cryptographic
+connections betwen blobs resulting in moving blobs between nodes. This
 process is fully automatic from the user's point of view and
 doesn't need any extra activity.
