@@ -1,5 +1,5 @@
 What the Cinode is?
-##################
+###################
 
 * It is a new kind of network used to host files and run web-like applications
 * It's fully distributed system made of resources cumulatively shared by users of the network
