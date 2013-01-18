@@ -1,4 +1,3 @@
-
 Blob validation
 +++++++++++++++
 
@@ -105,18 +104,18 @@ The validation of a blob is made in the following steps:
      request so that the peer can update it's local version
 
 The initialization vector of the cipher is made of the version
-number by padding it's representation with zeroes or cutting the
-serialized representation to the required number of bytes.
-Assuming the Version Number must change every time a new data
+number by padding it's serialized representation with zeroes or using
+required number of bytes from the beginning of this representation.
+Since the Version Number must change every time a new data
 is introduced, it reveals properties of a cryptographic nounce
 and thus can be securely used as the IV. This guarantees
 semantic security.
 
-In case of a kind of attack where the same Version Number is being
+In case of an attack where the same Version Number is being
 reused, the attacker must already be in a possession of the private key.
-This would make IV to be reused breaking semantic security. But since the
+This would allow the IV to be reused breaking semantic security. Since the
 attacker is already in a possession of the private key and thus also the
-data encryption key, there are no benefits from this kind of attack other
-than disturbance of the validation methods.
+data encryption key, there are no benefits for him other
+than small disturbance of the validation methods.
 
 .. image:: signvalidation.*
