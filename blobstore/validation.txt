@@ -19,8 +19,8 @@ Next sections describe currently used validation methods.
 Future versions of the protocol may extend this set
 by adding validation rules needed by particular blob types.
 
-Hash-based validation
-----------------------
+Hash-based validation (ID: 0x01)
+--------------------------------
 
 Hash-based validation is the simplest one and is generally
 applied to all blob types holding content rather than
@@ -54,9 +54,12 @@ enough to guarantee semantic security.
 
 .. image:: hashvalidation.*
 
+The layout of binary exchange form for the blob using this validation method is as follows:
 
-Sign-based validation
----------------------
+.. image:: hashdatalayout.*
+
+Sign-based validation (ID: 0x02)
+--------------------------------
 
 This validation method is based on a cryptographic sign of blob's content.
 Every blob using this method is associated with a public/private key pair.
@@ -119,3 +122,8 @@ data encryption key, there are no benefits for him other
 than small disturbance of the validation methods.
 
 .. image:: signvalidation.*
+
+The layout of binary exchange form for the blob using this validation method is as follows:
+
+.. image:: signdatalayout.*
+
