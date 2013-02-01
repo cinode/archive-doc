@@ -36,3 +36,5 @@ to particular types is presented below.
 .. include:: serialization.txt
 
 .. include:: blobtypes.txt
+
+.. include:: testvectors.txt
