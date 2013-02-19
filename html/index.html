@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to Cinode’s documentation! &mdash; Cinode 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Cinode 0.1 documentation" href="#" />
+    <link rel="next" title="1. Overview" href="overview/overview.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="overview/overview.html" title="1. Overview"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">Cinode 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-cinode-s-documentation">
+<h1>Welcome to Cinode&#8217;s documentation!<a class="headerlink" href="#welcome-to-cinode-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview/overview.html">1. Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#what-the-cinode-is">1.1. What the Cinode is?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#how-it-s-built">1.2. How it&#8217;s built</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#the-security">1.3. The security</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview/overview.html#selected-encryption-algorithms">1.3.1. Selected encryption algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview/overview.html#consideration-of-quantum-cryptography">1.3.2. Consideration of quantum cryptography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#local-access-interface">1.4. Local access interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#limitations">1.5. Limitations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview/overview.html#latency-and-lack-of-realtime-connectivity">1.5.1. Latency and lack of realtime connectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview/overview.html#the-always-remember-nature-of-the-network">1.5.2. The always-remember nature of the network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview/overview.html#sniffing-nodes">1.5.3. Sniffing nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview/overview.html#encryption-overhead">1.5.4. Encryption overhead</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#examples-of-use">1.6. Examples of use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview/overview.html#photo-gallery">1.6.1. Photo gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview/overview.html#cloud-storage-drive">1.6.2. Cloud storage drive</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="blobstore/blobstore.html">2. The blobstore</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blobstore/blobstore.html#blob-validation">2.1. Blob validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#hash-based-validation-id-0x01">2.1.1. Hash-based validation (ID: 0x01)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#sign-based-validation-id-0x02">2.1.2. Sign-based validation (ID: 0x02)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blobstore/blobstore.html#basic-serialization-rules">2.2. Basic serialization rules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#integer">2.2.1. Integer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#data-buffer">2.2.2. Data buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#string">2.2.3. String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#array">2.2.4. Array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#set">2.2.5. Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#map">2.2.6. Map</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blobstore/blobstore.html#blob-types">2.3. Blob types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#static-file-blob">2.3.1. Static File Blob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#static-split-file-blob">2.3.2. Static Split File Blob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#static-directory-blob">2.3.3. Static Directory Blob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#static-split-directory-blob">2.3.4. Static Split Directory Blob</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blobstore/blobstore.html#dynamic-link-blob">2.4. Dynamic Link Blob</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blobstore/blobstore.html#summary-of-blob-types">2.5. Summary of blob types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blobstore/blobstore.html#test-vectors">2.6. Test Vectors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#empty-static-simple-file-blob">2.6.1. Empty static simple file blob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#static-file-blob-with-the-content-a">2.6.2. Static file blob with the content &#8220;a&#8221;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#static-file-blob-with-the-content-hello-world">2.6.3. Static file blob with the content &#8220;Hello World!&#8221;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blobstore/blobstore.html#static-file-blob-with-the-content-consisting-of-all-lower-case-and-upper-case-ascii-letters">2.6.4. Static file blob with the content consisting of all lower-case and upper-case ASCII letters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nodenetwork/nodenetwork.html">3. The Network of Nodes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nodenetwork/nodenetwork.html#node-identification">3.1. Node identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodenetwork/nodenetwork.html#cross-node-connectivity">3.2. Cross-node connectivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodenetwork/nodenetwork.html#blob-requests">3.3. Blob requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dht/dht.html">4. Distributed Hash Table (DHT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dht/dht.html#bittorrent-s-dht-as-a-reference">4.1. Bittorrent&#8217;s DHT as a reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dht/dht.html#integration-with-the-nodes-network">4.2. Integration with the nodes network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dht/dht.html#blob-and-node-address-space">4.3. Blob and node address space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dht/dht.html#set-of-established-healthy-connections">4.4. Set of established healthy connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dht/dht.html#node-ad-blob-search-algorithms">4.5. Node ad blob search algorithms</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to Cinode&#8217;s documentation!</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="overview/overview.html"
+                        title="next chapter">1. Overview</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="overview/overview.html" title="1. Overview"
+             >next</a> |</li>
+        <li><a href="#">Cinode 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, byo.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
